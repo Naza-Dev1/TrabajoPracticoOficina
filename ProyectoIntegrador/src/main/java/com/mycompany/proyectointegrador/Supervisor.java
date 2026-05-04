@@ -1,8 +1,8 @@
 package com.mycompany.proyectointegrador;
 
-public class Employee extends Personnel {
+public class Supervisor extends Personnel {
 
-    public Employee(Integer id, String firstName, String lastName, Integer age, Integer yearsOfExperience, String email, String occupation, Boolean isActive, Double salary) {
+    public Supervisor(Integer id, String firstName, String lastName, Integer age, Integer yearsOfExperience, String email, String occupation, Boolean isActive, Double salary) {
         super(id, firstName, lastName, age, yearsOfExperience, email, occupation, isActive, salary);
     }
 
@@ -15,6 +15,5 @@ public class Employee extends Personnel {
         System.out.println("* Years of experience: " + this.getYearsOfExperience() + " - Occupation: " + this.getOccupation());
         System.out.println("* Active: " + this.getIsActive() + " - Salary: " + this.getSalary());
         System.out.println("***** ****** ***** ****** ***** ****** ******\n");
-
     }
 }

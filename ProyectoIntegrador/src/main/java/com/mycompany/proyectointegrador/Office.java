@@ -25,7 +25,8 @@ public class Office {
         // lo que el usuario digite.
         //------------------------------------------------------------
         Scanner input = new Scanner(System.in);
-        String eleccionUsuario = "";
+        String eleccionUsuarioMenu = "";
+        String eleccionUsuarioSubMenu = "";
         Integer id_employee = 10;
         Integer id_supervisor = 10;
         String nombre;
@@ -76,113 +77,171 @@ public class Office {
         //Creamos un bucle while que mostrara el menu del programa.
         //El bucle se detenie si "eleccionUsuario" es igual a 0.
         //------------------------------------------------------------
-        while (!eleccionUsuario.equals("0")) {
+        while (!eleccionUsuarioMenu.equals("0")) {
 
             //------------------------------------------------------------
             //Mostramos por pantalla las opciones disponibles del menu.
             //------------------------------------------------------------
             System.out.println("****** MENU DE GESTION DE OFICINA ******");
             System.out.println(" 0. Salir");
-            System.out.println(" 1. Agregar un nuevo empleado");
-            System.out.println(" 2. Agregar un nuevo supervisor");
-            System.out.println(" 3. Mostrar todos los datos de los empleados");
-            System.out.println(" 4. Mostrar todos los datos de los supervisores");
+            System.out.println(" 1. Agregar un nuevo trabajador");
+            System.out.println(" 2. Mostrar los datos de los trabajadores");
+            System.out.println(" 3. -");
+            System.out.println(" 4. -");
             System.out.println(" 5. Revisar salarios de empleado");
             System.out.println(" 6. Revisar salarios de supervisor");
             System.out.println(" 7. Revisar salarios de Jefe");
 
             System.out.print("Ingrese una opcion: ");
+            eleccionUsuarioMenu = input.nextLine();
 
-            eleccionUsuario = input.nextLine();
-
-            switch (eleccionUsuario) {
+            switch (eleccionUsuarioMenu) {
 
                 case "0":
                     System.out.println("***** SALIENDO DEL GESTOR DE OFICINA *****");
                     break;
 
                 case "1":
-                    System.out.print("***** AGREGAR UN NUEVO EMPLEADO *****\n");
+                    eleccionUsuarioSubMenu = "";
 
-                    System.out.print("Ingrese el nombre del empleado: ");
-                    nombre = input.nextLine();
+                    while (!eleccionUsuarioSubMenu.equals("0")) {
 
-                    System.out.print("Ingrese el apellido del empleado: ");
-                    apellido = input.nextLine();
+                        System.out.println("****** MENU DE AGREGAR NUEVO TRABAJADOR ******");
+                        System.out.println(" 0. Volver al menu principal.");
+                        System.out.println(" 1. Agregar un nuevo empleado.");
+                        System.out.println(" 2. Agregar un nuevo supervisor.");
 
-                    System.out.print("Ingrese la edad del empleado: ");
-                    edad = Integer.parseInt(input.nextLine());
+                        System.out.print("Ingrese una opcion: ");
+                        eleccionUsuarioSubMenu = input.nextLine();
 
-                    System.out.print("Ingrese los años de experiencia empleado: ");
-                    añosExperincia = Integer.parseInt(input.nextLine());
+                        switch (eleccionUsuarioSubMenu) {
+                            case "0":
+                                System.out.println("Volviendo al menu principal");
+                                break;
 
-                    System.out.print("Ingrese el email del empleado: ");
-                    email = input.nextLine();
+                            case "1":
 
-                    System.out.print("Ingrese la ocupacion del empleado: ");
-                    ocupacion = input.nextLine();
+                                System.out.print("***** AGREGANDO UN NUEVO EMPLEADO *****\n");
 
-                    System.out.print("El empleado esta activo: (true o false): ");
-                    estado = Boolean.parseBoolean(input.nextLine());
+                                System.out.print("Ingrese el nombre del empleado: ");
+                                nombre = input.nextLine();
+                                System.out.print("Ingrese el apellido del empleado: ");
+                                apellido = input.nextLine();
+                                System.out.print("Ingrese la edad del empleado: ");
+                                edad = Integer.parseInt(input.nextLine());
+                                System.out.print("Ingrese los años de experiencia empleado: ");
+                                añosExperincia = Integer.parseInt(input.nextLine());
+                                System.out.print("Ingrese el email del empleado: ");
+                                email = input.nextLine();
+                                System.out.print("Ingrese la ocupacion del empleado: ");
+                                ocupacion = input.nextLine();
+                                System.out.print("El empleado esta activo: (true o false): ");
+                                estado = Boolean.parseBoolean(input.nextLine());
+                                System.out.print("Ingrese el salario del empleado: ");
+                                salario = Double.parseDouble(input.nextLine());
 
-                    System.out.print("Ingrese el salario del empleado: ");
-                    salario = Double.parseDouble(input.nextLine());
+                                employees.add(new Employee(id_employee, nombre, apellido, edad, añosExperincia, email, ocupacion, estado, salario));
+                                id_employee++;
+                                break;
 
-                    employees.add(new Employee(id_employee, nombre, apellido, edad, añosExperincia, email, ocupacion, estado, salario));
-                    id_employee++;
+                            case "2":
+                                System.out.print("***** AGREGANDO UN NUEVO SUPERVISOR *****\n");
+
+                                System.out.print("Ingrese el nombre del supervisor: ");
+                                nombre = input.nextLine();
+                                System.out.print("Ingrese el apellido del supervisor: ");
+                                apellido = input.nextLine();
+                                System.out.print("Ingrese la edad del supervisor: ");
+                                edad = Integer.parseInt(input.nextLine());
+                                System.out.print("Ingrese los años de experiencia supervisor: ");
+                                añosExperincia = Integer.parseInt(input.nextLine());
+                                System.out.print("Ingrese el email del supervisor: ");
+                                email = input.nextLine();
+                                System.out.print("Ingrese la ocupacion del supervisor: ");
+                                ocupacion = input.nextLine();
+                                System.out.print("El supervisor esta activo: (true o false): ");
+                                estado = Boolean.parseBoolean(input.nextLine());
+                                System.out.print("Ingrese el salario del supervisor: ");
+                                salario = Double.parseDouble(input.nextLine());
+
+                                supervisors.add(new Supervisor(id_supervisor, nombre, apellido, edad, añosExperincia, email, ocupacion, estado, salario));
+                                id_supervisor++;
+                                break;
+
+                            default:
+                                System.out.println("Opcion no valida");
+                                break;
+                        }
+                    }
                     break;
 
                 case "2":
-                    System.out.print("***** AGREGAR UN NUEVO SUPERVISOR *****\n");
+                    eleccionUsuarioSubMenu = "";
 
-                    System.out.print("Ingrese el nombre del supervisor: ");
-                    nombre = input.nextLine();
+                    while (!eleccionUsuarioSubMenu.equals("0")) {
 
-                    System.out.print("Ingrese el apellido del supervisor: ");
-                    apellido = input.nextLine();
+                        System.out.println("****** MENU DE MOSTRAR LOS DATOS DE LOS TRABAJADORES ******");
+                        System.out.println(" 0. Volver al menu principal.");
+                        System.out.println(" 1. Mostrar datos de los empleados.");
+                        System.out.println(" 2. Mostrar datos de los supervisores.");
 
-                    System.out.print("Ingrese la edad del supervisor: ");
-                    edad = Integer.parseInt(input.nextLine());
+                        System.out.print("Ingrese una opcion: ");
+                        eleccionUsuarioSubMenu = input.nextLine();
 
-                    System.out.print("Ingrese los años de experiencia supervisor: ");
-                    añosExperincia = Integer.parseInt(input.nextLine());
+                        switch (eleccionUsuarioSubMenu) {
+                            case "0":
+                                System.out.println("Volviendo al menu principal");
+                                break;
 
-                    System.out.print("Ingrese el email del supervisor: ");
-                    email = input.nextLine();
+                            case "1":
+                                System.out.println("***** MOSTRANDO DATOS DE LOS EMPLEADOS *****");
+                                for (Employee emp : employees) {
+                                    emp.showDates();
+                                }
 
-                    System.out.print("Ingrese la ocupacion del supervisor: ");
-                    ocupacion = input.nextLine();
+                                break;
 
-                    System.out.print("El supervisor esta activo: (true o false): ");
-                    estado = Boolean.parseBoolean(input.nextLine());
+                            case "2":
+                                System.out.println("***** MOSTRANDO DATOS DE LOS SUPERVISORES *****");
+                                for (Supervisor sup : supervisors) {
+                                    sup.showDates();
+                                }
+                                break;
 
-                    System.out.print("Ingrese el salario del supervisor: ");
-                    salario = Double.parseDouble(input.nextLine());
+                            default:
+                                System.out.println("Opcion no valida");
+                                break;
+                        }
 
-                    supervisors.add(new Supervisor(id_supervisor, nombre, apellido, edad, añosExperincia, email, ocupacion, estado, salario));
-                    id_supervisor++;
+                    }
                     break;
 
                 case "3":
-                    System.out.println("***** MOSTRANDO TODOS LOS DATOS DE LOS EMPLEADOS *****");
-                    for (Employee emp : employees) {
-                        emp.showDates();
-                    }
+                    System.out.println("Nada aun");
                     break;
 
                 case "4":
-                    System.out.println("***** MOSTRANDO TODOS LOS DATOS DE LOS SUPERVISORES *****");
-                    for (Supervisor sup : supervisors) {
-                        sup.showDates();
-                    }
+                    System.out.println("Nada aun");
                     break;
 
                 case "5":
-                    System.out.println("Opción 5");
+                    System.out.println("***** MOSTRANDO LOS SALARIOS DE LOS EMPLEADOS *****");
+                    for (Employee emp : employees) {
+                        String nombreCompleto = emp.getFirstName() + " " + emp.getLastName();
+                        System.out.println("Empleado: " + nombreCompleto + " | Salario: " + emp.getSalary());
+                    }
                     break;
 
                 case "6":
-                    System.out.println("Opción 6");
+                    System.out.println("***** MOSTRANDO LOS SALARIOS DE LOS SUPERVISORES *****");
+                    for (Supervisor sup : supervisors) {
+                        String nombreCompleto = sup.getFirstName() + " " + sup.getLastName();
+                        System.out.println("Empleado: " + nombreCompleto + " | Salario: " + sup.getSalary());
+                    }
+                    break;
+                    
+                case "7":
+                    System.out.println("Nada aun");
                     break;
 
                 default:

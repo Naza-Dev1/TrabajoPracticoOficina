@@ -81,3 +81,4 @@ n: oaoa jaja
 r: agregué un nextLine porque si registramos un empleado únicamente va a leer un nombre, imaginate si tenemos 2 "Martín" o 2 "Juan" jeje
 r: salgo un ratito y ya vuelvo
 n: oki
+r: estoy editando el office.java para agregar la muestra de salarios de empleado, si falla algo solo desactiva el código comentándolo con /* y al final */

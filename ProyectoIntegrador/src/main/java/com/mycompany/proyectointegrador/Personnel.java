@@ -135,7 +135,7 @@ public abstract class Personnel {
     }
 
     //------------------------------------------------------------
-    //Metodos abstractos
+    //Atributo abstracto (no lleva cuerpo)
     //------------------------------------------------------------
     public abstract void showDates();
 

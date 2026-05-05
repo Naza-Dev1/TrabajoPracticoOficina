@@ -69,3 +69,46 @@ El compañero Santiago H creo el archivo DiagramaProyectoIntegrador.draowio con 
 
 ***
  
+**(5/5/26)**
+El compañero Santiago H y Robertino adelantaron el proyecto,
+
+Santiago H creo una lista el Github con el fin de tener claros los objetivos y el seguimiento del programa
+
+#### Lista de Objetivos para Personnel.java
+[x] Crear la clase abstracta Personnel.
+[x] Crear los atributos protegidos. 
+[x] Crear el constructor publico Personnel.
+[x] Crear los metodos publicos get y set de cada atributo.
+[x] Crear al menos un metodo abstracto.
+
+#### Lista de Objetivos para Employee.java
+[x] Crear la clase publica Employee que extiende de Personnel.
+[x] Crear el contructor publico Employee con los atributos heredados de Personnel. 
+[x] Usar @Override para sobre-escribir los metodos abstractos de Personnel
+
+#### Lista de Objetivos para Supervisor.java
+[x] Crear la clase publica Supervisor que extiende de Personnel.
+[x] Crear el contructor publico Supervisor con los atributos heredados de Personnel. 
+[x] Usar @Override para sobre-escribir los metodos abstractos de Personnel
+
+#### Lista de Objetivos para Office.java
+[x] Crear la clase publica Office.
+[x] Declarar la clase main del programa. 
+[x] Declarar las variables del programa.
+[x] Declarar la Lista employees del programa.
+[x] Declarar la Lista supervisors del programa. 
+[x] Usar un bucle while para que el menu no se cierre. 
+[x] Usar un switch para que diriga cada opcion del menu.
+
+#### Lista de Objetivos para el Menu de Office.java
+[x] 0. Salir. (Cierra el programa al romper el bucle while). 
+[x] 1. Agregar un nuevo trabajador.
+[x] 2. Mostrar datos de los trabajadores. 
+[ ] 3. -
+[ ] 4. -
+[ ] 5. -
+[ ] 6. -
+[ ] 7. -
+[x] Default. 
+
+

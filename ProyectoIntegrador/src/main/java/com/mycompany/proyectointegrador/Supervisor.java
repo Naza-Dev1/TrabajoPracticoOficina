@@ -9,7 +9,7 @@ public class Supervisor extends Personnel {
     @Override
 
     public void showDates() {
-        System.out.println("***** ***** EMPLEADO ID: " + this.getId() + " ***** ****** ******");
+        System.out.println("***** ***** SUPERVISOR ID: " + this.getId() + " ***** ****** ******");
         System.out.println("* Name: " + this.getFirstName() + " - Last name: " + this.getLastName());
         System.out.println("* Age: " + this.getAge() + " - Email: " + this.getEmail());
         System.out.println("* Years of experience: " + this.getYearsOfExperience() + " - Occupation: " + this.getOccupation());

@@ -100,10 +100,16 @@ public class Office {
 
             switch (eleccionUsuarioMenu) {
 
+                //------------------------------------------------------------
+                //En caso de elegir 0 se sale del programa
+                //------------------------------------------------------------
                 case "0":
                     System.out.println(" SALIENDO DEL GESTOR DE OFICINA *****");
                     break;
 
+                //------------------------------------------------------------
+                //En caso de elegir 1 ingresa al menu Agregar Nuevo Trabajador
+                //------------------------------------------------------------
                 case "1":
                     eleccionUsuarioSubMenu = "";
 
@@ -182,6 +188,10 @@ public class Office {
                     }
                     break;
 
+                //------------------------------------------------------------
+                //En caso de elegir 2 ingresa al Menu dar de baja a un 
+                // trabajador
+                //------------------------------------------------------------
                 case "2":
                     eleccionUsuarioSubMenu = "";
 
@@ -214,7 +224,10 @@ public class Office {
                         }
                     }
                     break;
-
+                //------------------------------------------------------------
+                //En caso de elegir 3 ingresa al Menu dar de alta a un
+                // trabajador 
+                //------------------------------------------------------------
                 case "3":
                     eleccionUsuarioSubMenu = "";
 
@@ -248,7 +261,10 @@ public class Office {
                         }
                     }
                     break;
-
+                //------------------------------------------------------------
+                //En caso de elegir 4 ingresa al Menu mostrar datos de los
+                // trabajadores
+                //------------------------------------------------------------
                 case "4":
                     eleccionUsuarioSubMenu = "";
 
@@ -288,7 +304,10 @@ public class Office {
 
                     }
                     break;
-
+                //------------------------------------------------------------
+                //En caso de elegir 5 ingresa al Menu modificar el salario de
+                // un trabajador
+                //------------------------------------------------------------
                 case "5":
                     eleccionUsuarioSubMenu = "";
 
@@ -324,6 +343,10 @@ public class Office {
                     }
                     break;
 
+                //------------------------------------------------------------
+                //En caso de elegir 6 ingresa al Menu modificar el horario de
+                // un trabajador
+                //------------------------------------------------------------
                 case "6":
                     eleccionUsuarioSubMenu = "";
 
@@ -357,6 +380,10 @@ public class Office {
                     }
                     break;
 
+                //------------------------------------------------------------
+                //En caso de elegir 7 ingresa al Menu modificar el email de
+                // un trabajador
+                //------------------------------------------------------------
                 case "7":
                     eleccionUsuarioSubMenu = "";
 
@@ -390,6 +417,9 @@ public class Office {
                     }
                     break;
 
+                //------------------------------------------------------------
+                //En caso de elegir 8 ingresa al Menu ascender un trabajador
+                //------------------------------------------------------------
                 case "8":
                     eleccionUsuarioSubMenu = "";
 
@@ -423,6 +453,9 @@ public class Office {
                     }
                     break;
 
+                //------------------------------------------------------------
+                //En caso de elegir 9 ingresa al Menu jubilar a un trabajador
+                //------------------------------------------------------------
                 case "9":
                     eleccionUsuarioSubMenu = "";
 
@@ -455,7 +488,10 @@ public class Office {
                         }
                     }
                     break;
-
+                //------------------------------------------------------------
+                //En caso de elegir otra cosa a default y de un mensaje de
+                //error al usuario
+                //------------------------------------------------------------
                 default:
                     System.out.println("Opcion no valida");
                     break;

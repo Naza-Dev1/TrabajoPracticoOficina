@@ -183,5 +183,4 @@ public abstract class Personnel {
     public abstract void promotion();
 
     public abstract void retired();
-
 }

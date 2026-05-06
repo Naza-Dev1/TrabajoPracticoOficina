@@ -73,6 +73,8 @@ El compañero Santiago H creo el archivo DiagramaProyectoIntegrador.draowio con 
 El compañero Santiago H y Robertino adelantaron el proyecto,
 
 Santiago H planteo y creo una Lista de Objetivos de cada archivos.java con el fin de tener claros los objetivos y el seguimiento del programa.
+Robertino V adelanto la parte encargada de mostrar y modificar el salario de los empleados y supervisores.
+
 
 #### Lista de Objetivos para Personnel.java
 - [x] Crear la clase abstracta Personnel.
@@ -100,15 +102,35 @@ Santiago H planteo y creo una Lista de Objetivos de cada archivos.java con el fi
 - [x] Usar un bucle while para que el menu no se cierre. 
 - [x] Usar un switch para que diriga cada opcion del menu.
 
-#### Lista de Objetivos para el Menu de Office.java
+Dentro del switch
 - [x] 0. Salir.
+El bucle while recibe "false" y deja de iterar, asi terminando el programa.
+
 - [x] 1. Agregar un nuevo trabajador.
+Abre el Menu agregar un nuevo trabajador.
+- [x] 0. Volver al Menu principal.
+- [x] 1. Agregar un nuevo empleado.
+- [x] 2. Agregar un nuevo supervisor.
+- [x] Default.
+
 - [x] 2. Mostrar datos de los trabajadores. 
+Abre el Menu mostrar datos de los trabajadores.
+- [x] 0. Volver al Menu principal.
+- [x] 1. Mostrar datos de los empleados.
+- [x] 2. Mostrar datos de los supervisores.
+- [x] Default.
+
 - [ ] 3. -
+
 - [ ] 4. -
+
 - [ ] 5. -
+
 - [ ] 6. -
+
 - [ ] 7. -
+
 - [x] Default. 
+Muestra un mensaje de error por opcion invalida y regresa al Menu principal
 
 

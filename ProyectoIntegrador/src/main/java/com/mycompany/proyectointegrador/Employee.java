@@ -23,20 +23,19 @@ public class Employee extends Personnel {
 
     public void onboard() {
         System.out.println("Dar de alta");
+
     }
 
     @Override
 
     public void dismiss() {
         System.out.println("Dar de baja");
-
     }
 
     @Override
 
     public void changeSalary() {
         System.out.println("Modifica salario");
-
     }
 
     @Override
@@ -50,6 +49,7 @@ public class Employee extends Personnel {
 
     public void changeEmail() {
         System.out.println("Modifica email");
+
     }
 
     @Override

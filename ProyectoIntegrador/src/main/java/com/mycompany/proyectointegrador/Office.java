@@ -42,6 +42,7 @@ public class Office {
         //Creamos e instanciamos la Lista "employees", esta contiene 
         //los datos de los empleados que se le daran al Contructor.
         //------------------------------------------------------------
+
         List<Employee> employees = new ArrayList<>(
                 List.of(
                         new Employee(1, "Andres", "Morales", 28, 5, "andres.morales@company.com", "Employee", true, false, 3200.0),
@@ -97,6 +98,7 @@ public class Office {
 
             System.out.print("Ingrese una opcion: ");
             eleccionUsuarioMenu = input.nextLine();
+            System.out.println("");
 
             switch (eleccionUsuarioMenu) {
 
@@ -122,37 +124,51 @@ public class Office {
 
                         System.out.print("Ingrese una opcion: ");
                         eleccionUsuarioSubMenu = input.nextLine();
+                        System.out.println("");
 
                         switch (eleccionUsuarioSubMenu) {
                             case "0":
                                 System.out.println("Volviendo al menu principal");
+                                System.out.println("");
                                 break;
 
                             case "1":
 
-                                System.out.print("***** AGREGAR UN NUEVO EMPLEADO *****\n");
+                                System.out.println("***** AGREGAR UN NUEVO EMPLEADO *****");
 
                                 System.out.print("Ingrese el nombre del empleado: ");
                                 nombre = input.nextLine();
+
                                 System.out.print("Ingrese el apellido del empleado: ");
                                 apellido = input.nextLine();
+
                                 System.out.print("Ingrese la edad del empleado: ");
                                 edad = Integer.parseInt(input.nextLine());
+
                                 System.out.print("Ingrese los años de experiencia empleado: ");
                                 añosExperincia = Integer.parseInt(input.nextLine());
+
                                 System.out.print("Ingrese el email del empleado: ");
                                 email = input.nextLine();
+
                                 System.out.print("Ingrese la ocupacion del empleado: ");
                                 ocupacion = input.nextLine();
+
                                 System.out.print("El empleado esta activo: (true o false): ");
                                 estaActivo = Boolean.parseBoolean(input.nextLine());
+
                                 System.out.print("El empleado esta jubilado: (true o false): ");
                                 estaJubilado = Boolean.parseBoolean(input.nextLine());
+
                                 System.out.print("Ingrese el salario del empleado: ");
                                 salario = Double.parseDouble(input.nextLine());
 
                                 employees.add(new Employee(id_employee, nombre, apellido, edad, añosExperincia, email, ocupacion, estaActivo, estaJubilado, salario));
                                 id_employee++;
+
+                                System.out.println("***** SE AGREGO EL NUEVO EMPLEADO *****");
+                                System.out.println("");
+
                                 break;
 
                             case "2":
@@ -160,29 +176,42 @@ public class Office {
 
                                 System.out.print("Ingrese el nombre del supervisor: ");
                                 nombre = input.nextLine();
+
                                 System.out.print("Ingrese el apellido del supervisor: ");
                                 apellido = input.nextLine();
+
                                 System.out.print("Ingrese la edad del supervisor: ");
                                 edad = Integer.parseInt(input.nextLine());
+
                                 System.out.print("Ingrese los años de experiencia supervisor: ");
                                 añosExperincia = Integer.parseInt(input.nextLine());
+
                                 System.out.print("Ingrese el email del supervisor: ");
                                 email = input.nextLine();
+
                                 System.out.print("Ingrese la ocupacion del supervisor: ");
                                 ocupacion = input.nextLine();
+
                                 System.out.print("El supervisor esta activo: (true o false): ");
                                 estaActivo = Boolean.parseBoolean(input.nextLine());
+
                                 System.out.print("El supervisor esta jubilado: (true o false): ");
                                 estaJubilado = Boolean.parseBoolean(input.nextLine());
+
                                 System.out.print("Ingrese el salario del supervisor: ");
                                 salario = Double.parseDouble(input.nextLine());
 
                                 supervisors.add(new Supervisor(id_supervisor, nombre, apellido, edad, añosExperincia, email, ocupacion, estaActivo, estaJubilado, salario));
                                 id_supervisor++;
+
+                                System.out.println("***** SE AGREGO EL NUEVO SUPERVISOR *****");
+                                System.out.println("");
+
                                 break;
 
                             default:
                                 System.out.println("Opcion no valida");
+                                System.out.println("");
                                 break;
                         }
                     }
@@ -204,22 +233,28 @@ public class Office {
 
                         System.out.print("Ingrese una opcion: ");
                         eleccionUsuarioSubMenu = input.nextLine();
+                        System.out.println("");
 
                         switch (eleccionUsuarioSubMenu) {
                             case "0":
                                 System.out.println("Volviendo al menu principal");
+                                System.out.println("");
                                 break;
 
                             case "1":
                                 System.out.println("***** DAR DE BAJA A UN EMPLEADO *****");
+                                System.out.println("***** MOSTRANDO LISTA DE EMPLEADOS QUE EXISTAN *****");
+                                System.out.println("");
                                 break;
 
                             case "2":
                                 System.out.println("***** DAR DE BAJA A UN SUPERVISOR *****");
+                                System.out.println("");
                                 break;
 
                             default:
                                 System.out.println("Opcion no valida");
+                                System.out.println("");
                                 break;
                         }
                     }
@@ -240,22 +275,27 @@ public class Office {
 
                         System.out.print("Ingrese una opcion: ");
                         eleccionUsuarioSubMenu = input.nextLine();
+                        System.out.println("");
 
                         switch (eleccionUsuarioSubMenu) {
                             case "0":
                                 System.out.println("Volviendo al menu principal");
+                                System.out.println("");
                                 break;
 
                             case "1":
                                 System.out.println("***** DAR DE ALTA A UN EMPLEADO *****");
+                                System.out.println("");
                                 break;
 
                             case "2":
                                 System.out.println("***** DAR DE ALTA A UN SUPERVISOR *****");
+                                System.out.println("");
                                 break;
 
                             default:
                                 System.out.println("Opcion no valida");
+                                System.out.println("");
                                 break;
 
                         }
@@ -277,10 +317,12 @@ public class Office {
 
                         System.out.print("Ingrese una opcion: ");
                         eleccionUsuarioSubMenu = input.nextLine();
+                        System.out.println("");
 
                         switch (eleccionUsuarioSubMenu) {
                             case "0":
                                 System.out.println("Volviendo al menu principal");
+                                System.out.println("");
                                 break;
 
                             case "1":
@@ -288,6 +330,7 @@ public class Office {
                                 for (Employee emp : employees) {
                                     emp.showDates();
                                 }
+                                System.out.println("");
                                 break;
 
                             case "2":
@@ -295,10 +338,12 @@ public class Office {
                                 for (Supervisor sup : supervisors) {
                                     sup.showDates();
                                 }
+                                System.out.println("");
                                 break;
 
                             default:
                                 System.out.println("Opcion no valida");
+                                System.out.println("");
                                 break;
                         }
 
@@ -320,23 +365,27 @@ public class Office {
 
                         System.out.print("Ingrese una opcion: ");
                         eleccionUsuarioSubMenu = input.nextLine();
+                        System.out.println("");
 
                         switch (eleccionUsuarioSubMenu) {
                             case "0":
                                 System.out.println("Volviendo al menu principal");
+                                System.out.println("");
                                 break;
 
                             case "1":
                                 System.out.println("***** MODIFICAR EL SALARIO DE UN EMPLEADO *****");
-
+                                System.out.println("");
                                 break;
 
                             case "2":
                                 System.out.println("***** MODIFICAR EL SALARIO DE UN SUPERVISOR *****");
+                                System.out.println("");
                                 break;
 
                             default:
                                 System.out.println("Opcion no valida");
+                                System.out.println("");
                                 break;
                         }
 
@@ -359,22 +408,27 @@ public class Office {
 
                         System.out.print("Ingrese una opcion: ");
                         eleccionUsuarioSubMenu = input.nextLine();
+                        System.out.println("");
 
                         switch (eleccionUsuarioSubMenu) {
                             case "0":
                                 System.out.println("Volviendo al menu principal");
+                                System.out.println("");
                                 break;
 
                             case "1":
                                 System.out.println("***** MODIFICAR HORARIO A UN EMPLEADO *****");
+                                System.out.println("");
                                 break;
 
                             case "2":
                                 System.out.println("***** MODIFICAR HORARIO A UN SUPERVISOR *****");
+                                System.out.println("");
                                 break;
 
                             default:
                                 System.out.println("Opcion no valida");
+                                System.out.println("");
                                 break;
                         }
                     }
@@ -396,22 +450,86 @@ public class Office {
 
                         System.out.print("Ingrese una opcion: ");
                         eleccionUsuarioSubMenu = input.nextLine();
+                        System.out.println("");
+
+                        int idModificarEmail;
 
                         switch (eleccionUsuarioSubMenu) {
                             case "0":
                                 System.out.println("Volviendo al menu principal");
+                                System.out.println("");
                                 break;
 
                             case "1":
                                 System.out.println("***** MODIFICAR EMAIL A UN EMPLEADO *****");
+
+                                System.out.print("Ingrese el ID del empleado: ");
+                                idModificarEmail = input.nextInt();
+                                input.nextLine();
+                                System.out.println("");
+
+                                boolean empleadoEncontrado = false;
+                                for (Employee emp : employees) {
+                                    if (emp.getId().equals(idModificarEmail)) {
+                                        System.out.println("***** Se encontro el ID:" + idModificarEmail + " *****");
+                                        System.out.println("Empleado: " + emp.getFirstName() + " " + emp.getLastName() + "- Email actual: " + emp.getEmail());
+                                        System.out.println("");
+
+                                        System.out.print("Ingrese el nuevo email del empleado: ");
+                                        String nuevoEmailEmpleado = input.nextLine();
+                                        System.out.println("");
+
+                                        emp.setEmail(nuevoEmailEmpleado);
+                                        System.out.println("***** EMAIL MODIFICADO EXITOSAMENTE *****");
+                                        empleadoEncontrado = true;
+                                        break;
+                                    }
+                                }
+                                if (!empleadoEncontrado) {
+
+                                    System.out.println("***** NO SE ENCONTRO EL ID: " + idModificarEmail
+                                            + " *****");
+
+                                }
+                                System.out.println("");
                                 break;
 
                             case "2":
                                 System.out.println("***** MODIFICAR EMAIL A UN SUPERVISOR *****");
+                                System.out.println("Ingrese el ID del supervisor: ");
+                                idModificarEmail = input.nextInt();
+                                input.nextLine();
+                                System.out.println("");
+
+                                boolean supervisorEncontrado = false;
+                                for (Supervisor sup : supervisors) {
+                                    if (sup.getId().equals(idModificarEmail)) {
+                                        System.out.println("***** Se encontro el ID:" + idModificarEmail + " *****");
+                                        System.out.println("Supervisor: " + sup.getFirstName() + " " + sup.getLastName() + "- Email actual: " + sup.getEmail());
+                                        System.out.println("");
+
+                                        System.out.print("Ingrese el nuevo email del supervisor: ");
+                                        String nuevoEmailSupervisor = input.nextLine();
+                                        System.out.println("");
+
+                                        sup.setEmail(nuevoEmailSupervisor);
+                                        System.out.println("***** EMAIL MODIFICADO EXITOSAMENTE *****");
+
+                                        supervisorEncontrado = true;
+                                        break;
+                                    }
+                                }
+                                if (!supervisorEncontrado) {
+                                    System.out.println("***** NO SE ENCONTRO EL ID: " + idModificarEmail
+                                            + " *****");
+
+                                }
+                                System.out.println("");
                                 break;
 
                             default:
                                 System.out.println("Opcion no valida");
+                                System.out.println("");
                                 break;
                         }
                     }
@@ -432,22 +550,26 @@ public class Office {
 
                         System.out.print("Ingrese una opcion: ");
                         eleccionUsuarioSubMenu = input.nextLine();
-
+                        System.out.println("");
                         switch (eleccionUsuarioSubMenu) {
                             case "0":
                                 System.out.println("Volviendo al menu principal");
+                                System.out.println("");
                                 break;
 
                             case "1":
                                 System.out.println("***** ASCENDER A UN EMPLEADO *****");
+                                System.out.println("");
                                 break;
 
                             case "2":
                                 System.out.println("***** ASCENDER A UN SUPERVISOR *****");
+                                System.out.println("");
                                 break;
 
                             default:
                                 System.out.println("Opcion no valida");
+                                System.out.println("");
                                 break;
                         }
                     }
@@ -468,22 +590,27 @@ public class Office {
 
                         System.out.print("Ingrese una opcion: ");
                         eleccionUsuarioSubMenu = input.nextLine();
+                        System.out.println("");
 
                         switch (eleccionUsuarioSubMenu) {
                             case "0":
                                 System.out.println("Volviendo al menu principal");
+                                System.out.println("");
                                 break;
 
                             case "1":
                                 System.out.println("***** JUBILAR A UN EMPLEADO *****");
+                                System.out.println("");
                                 break;
 
                             case "2":
                                 System.out.println("***** JUBILAR A UN SUPERVISOR *****");
+                                System.out.println("");
                                 break;
 
                             default:
                                 System.out.println("Opcion no valida");
+                                System.out.println("");
                                 break;
                         }
                     }
@@ -494,24 +621,10 @@ public class Office {
                 //------------------------------------------------------------
                 default:
                     System.out.println("Opcion no valida");
+                    System.out.println("");
                     break;
             }
         }
         input.close();
     }
 }
-
-// case "5":
-//     System.out.println("***** MOSTRANDO LOS SALARIOS DE LOS EMPLEADOS *****");
-//     for (Employee emp : employees) {
-//         String nombreCompleto = emp.getFirstName() + " " + emp.getLastName();
-//         System.out.println("Empleado: " + nombreCompleto + " | Salario: " + emp.getSalary());
-//     }
-//     break;
-// case "6":
-//     System.out.println("***** MOSTRANDO LOS SALARIOS DE LOS SUPERVISORES *****");
-//     for (Supervisor sup : supervisors) {
-//         String nombreCompleto = sup.getFirstName() + " " + sup.getLastName();
-//         System.out.println("Empleado: " + nombreCompleto + " | Salario: " + sup.getSalary());
-//     }
-                //     break;

@@ -82,3 +82,21 @@ r: agregué un nextLine porque si registramos un empleado únicamente va a leer 
 r: salgo un ratito y ya vuelvo
 n: oki
 r: estoy editando el office.java para agregar la muestra de salarios de empleado, si falla algo solo desactiva el código comentándolo con /* y al final */
+r: buenas, tengo la idea para que hagamos el diccionario así calculamos con las ID, tengo para hacer el código map, ya importé las librerías
+
+n: te decia q no lo hagamos, terminemos de armar bien el menu completo y luego veamos si se puede
+r: okey okey
+
+n: despues nos pongamos el peso de modificar, ahora creemos lo que falta jaja asi avanzamos.
+r: dale entonces me enfoco en otro apartado
+
+n: se logran eliminar los trabajadores? esta bueno q las cosas se manejen por el ID siempre.
+
+n: si tenes la extension Java de Oracle Corporation, puede que te permita ejecutar el codigo.
+n: arriba del main aparece un boton que dice "Run main" y  podes ejecutar.
+
+r: ah no no lo ví, tendría que ejecutar el código jaja, ahí lo reviso
+
+n: de una, yo lo vengo viendo asi desde el iniciio  y vamos bien jaj
+r: ya hice el apartado de la modificación de email tanto de empleado como de supervisor.
+n: genial!!!

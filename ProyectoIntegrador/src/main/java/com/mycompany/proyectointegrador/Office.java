@@ -58,18 +58,18 @@ public class Office {
             //Mostramos por pantalla las opciones disponibles del menu.
             //------------------------------------------------------------
             System.out.println("***** MENU DE GESTION DE OFICINA *****");
-            System.out.println(" 0. Salir");
-            System.out.println(" 1. Agregar un nuevo trabajador");
-            System.err.println(" 2. Dar de baja a un trabajador");
-            System.err.println(" 3. Dar de alta a un trabajador");
-            System.out.println(" 4. Mostrar datos de los trabajadores");
-            System.out.println(" 5. Modificar el salario de un trabajador");
-            System.out.println(" 6. Modificar el horario de un trabajador");
-            System.out.println(" 7. Modificar el email de un trabajador");
-            System.out.println(" 8. Ascender un trabajador");
-            System.out.println(" 9. Jubilar un trabajador");
+            System.out.println("* [0]-> Salir");
+            System.out.println("* [1]-> Agregar un nuevo trabajador");
+            System.err.println("* [2]-> Dar de baja a un trabajador");
+            System.err.println("* [3]-> Dar de alta a un trabajador");
+            System.out.println("* [4]-> Mostrar datos de los trabajadores");
+            System.out.println("* [5]-> Modificar el salario de un trabajador");
+            System.out.println("* [6]-> Modificar el horario de un trabajador");
+            System.out.println("* [7]-> Modificar el email de un trabajador");
+            System.out.println("* [8]-> Ascender un trabajador");
+            System.out.println("* [9]-> Jubilar un trabajador");
 
-            System.out.print("Ingrese una opcion: ");
+            System.out.print("* Ingrese una opcion: ");
             eleccionUsuarioMenu = input.nextLine();
             System.out.println("");
 
@@ -79,7 +79,7 @@ public class Office {
                 //En caso de elegir 0 se sale del programa
                 //------------------------------------------------------------
                 case "0":
-                    System.out.println(" SALIENDO DEL GESTOR DE OFICINA *****");
+                    System.out.println("***** SALIENDO DEL GESTOR DE OFICINA *****");
                     break;
 
                 //------------------------------------------------------------
@@ -91,17 +91,17 @@ public class Office {
                     while (!eleccionUsuarioSubMenu.equals("0")) {
 
                         System.out.println("***** MENU DE AGREGAR NUEVO TRABAJADOR *****");
-                        System.out.println(" 0. Volver al menu principal.");
-                        System.out.println(" 1. Agregar un nuevo empleado.");
-                        System.out.println(" 2. Agregar un nuevo supervisor.");
+                        System.out.println("* [0]-> Volver al menu principal.");
+                        System.out.println("* [1]-> Agregar un nuevo empleado.");
+                        System.out.println("* [2]-> Agregar un nuevo supervisor.");
 
-                        System.out.print("Ingrese una opcion: ");
+                        System.out.print("* Ingrese una opcion: ");
                         eleccionUsuarioSubMenu = input.nextLine();
                         System.out.println("");
 
                         switch (eleccionUsuarioSubMenu) {
                             case "0":
-                                System.out.println("Volviendo al menu principal");
+                                System.out.println("* Volviendo al menu principal");
                                 System.out.println("");
                                 break;
 
@@ -111,31 +111,31 @@ public class Office {
 
                                 id_employee = DataBaseEmployee.getNextId();
 
-                                System.out.print("Ingrese el nombre del empleado: ");
+                                System.out.print("* Ingrese el nombre del empleado: ");
                                 nombre = input.nextLine();
 
-                                System.out.print("Ingrese el apellido del empleado: ");
+                                System.out.print("* Ingrese el apellido del empleado: ");
                                 apellido = input.nextLine();
 
-                                System.out.print("Ingrese la edad del empleado: ");
+                                System.out.print("* Ingrese la edad del empleado: ");
                                 edad = Integer.parseInt(input.nextLine());
 
-                                System.out.print("Ingrese los años de experiencia empleado: ");
+                                System.out.print("* Ingrese los años de experiencia empleado: ");
                                 añosExperincia = Integer.parseInt(input.nextLine());
 
-                                System.out.print("Ingrese el email del empleado: ");
+                                System.out.print("* Ingrese el email del empleado: ");
                                 email = input.nextLine();
 
-                                System.out.print("Ingrese la ocupacion del empleado: ");
+                                System.out.print("* Ingrese la ocupacion del empleado: ");
                                 ocupacion = input.nextLine();
 
-                                System.out.print("El empleado esta activo: (true o false): ");
+                                System.out.print("* El empleado esta activo: (true o false): ");
                                 estaActivo = Boolean.parseBoolean(input.nextLine());
 
-                                System.out.print("El empleado esta jubilado: (true o false): ");
+                                System.out.print("* El empleado esta jubilado: (true o false): ");
                                 estaJubilado = Boolean.parseBoolean(input.nextLine());
 
-                                System.out.print("Ingrese el salario del empleado: ");
+                                System.out.print("* Ingrese el salario del empleado: ");
                                 salario = Double.parseDouble(input.nextLine());
 
                                 DataBaseEmployee.save(new Employee(id_employee, nombre, apellido, edad, añosExperincia, email, ocupacion, estaActivo, estaJubilado, salario));
@@ -150,31 +150,31 @@ public class Office {
 
                                 id_supervisor = DataBaseSupervisor.getNextId();
 
-                                System.out.print("Ingrese el nombre del supervisor: ");
+                                System.out.print("* Ingrese el nombre del supervisor: ");
                                 nombre = input.nextLine();
 
-                                System.out.print("Ingrese el apellido del supervisor: ");
+                                System.out.print("* Ingrese el apellido del supervisor: ");
                                 apellido = input.nextLine();
 
                                 System.out.print("Ingrese la edad del supervisor: ");
                                 edad = Integer.parseInt(input.nextLine());
 
-                                System.out.print("Ingrese los años de experiencia supervisor: ");
+                                System.out.print("* Ingrese los años de experiencia supervisor: ");
                                 añosExperincia = Integer.parseInt(input.nextLine());
 
-                                System.out.print("Ingrese el email del supervisor: ");
+                                System.out.print("* Ingrese el email del supervisor: ");
                                 email = input.nextLine();
 
-                                System.out.print("Ingrese la ocupacion del supervisor: ");
+                                System.out.print("* Ingrese la ocupacion del supervisor: ");
                                 ocupacion = input.nextLine();
 
-                                System.out.print("El supervisor esta activo: (true o false): ");
+                                System.out.print("* El supervisor esta activo: (true o false): ");
                                 estaActivo = Boolean.parseBoolean(input.nextLine());
 
-                                System.out.print("El supervisor esta jubilado: (true o false): ");
+                                System.out.print("* El supervisor esta jubilado: (true o false): ");
                                 estaJubilado = Boolean.parseBoolean(input.nextLine());
 
-                                System.out.print("Ingrese el salario del supervisor: ");
+                                System.out.print("* Ingrese el salario del supervisor: ");
                                 salario = Double.parseDouble(input.nextLine());
 
                                 DataBaseSupervisor.save(new Supervisor(id_supervisor, nombre, apellido, edad, añosExperincia, email, ocupacion, estaActivo, estaJubilado, salario));
@@ -185,7 +185,7 @@ public class Office {
                                 break;
 
                             default:
-                                System.out.println("Opcion no valida");
+                                System.out.println("* Opcion no valida");
                                 System.out.println("");
                                 break;
                         }
@@ -202,17 +202,17 @@ public class Office {
                     while (!eleccionUsuarioSubMenu.equals("0")) {
 
                         System.out.println("***** MENU DAR DE BAJA A UN TRABAJADOR *****");
-                        System.out.println(" 0. Volver al menu principal.");
-                        System.out.println(" 1. Dar de baja a un empleado.");
-                        System.out.println(" 2. Dar de baja a un supervisor.");
+                        System.out.println("* [0]-> Volver al menu principal.");
+                        System.out.println("* [1]-> Dar de baja a un empleado.");
+                        System.out.println("* [2]-> Dar de baja a un supervisor.");
 
-                        System.out.print("Ingrese una opcion: ");
+                        System.out.print("* Ingrese una opcion: ");
                         eleccionUsuarioSubMenu = input.nextLine();
                         System.out.println("");
 
                         switch (eleccionUsuarioSubMenu) {
                             case "0":
-                                System.out.println("Volviendo al menu principal");
+                                System.out.println("* Volviendo al menu principal");
                                 System.out.println("");
                                 break;
 
@@ -228,7 +228,7 @@ public class Office {
                                 break;
 
                             default:
-                                System.out.println("Opcion no valida");
+                                System.out.println("* Opcion no valida");
                                 System.out.println("");
                                 break;
                         }
@@ -244,17 +244,17 @@ public class Office {
                     while (!eleccionUsuarioSubMenu.equals("0")) {
 
                         System.out.println("***** MENU DAR DE ALTA A UN TRABAJADOR *****");
-                        System.out.println(" 0. Volver al menu principal.");
-                        System.out.println(" 1. Dar de alta a un empleado.");
-                        System.out.println(" 2. Dar de alta a un supervisor.");
+                        System.out.println("* [0]-> Volver al menu principal.");
+                        System.out.println("* [1]-> Dar de alta a un empleado.");
+                        System.out.println("* [2]-> Dar de alta a un supervisor.");
 
-                        System.out.print("Ingrese una opcion: ");
+                        System.out.print("* Ingrese una opcion: ");
                         eleccionUsuarioSubMenu = input.nextLine();
                         System.out.println("");
 
                         switch (eleccionUsuarioSubMenu) {
                             case "0":
-                                System.out.println("Volviendo al menu principal");
+                                System.out.println("* Volviendo al menu principal");
                                 System.out.println("");
                                 break;
 
@@ -269,7 +269,7 @@ public class Office {
                                 break;
 
                             default:
-                                System.out.println("Opcion no valida");
+                                System.out.println("* Opcion no valida");
                                 System.out.println("");
                                 break;
 
@@ -286,17 +286,17 @@ public class Office {
                     while (!eleccionUsuarioSubMenu.equals("0")) {
 
                         System.out.println("***** MENU DE MOSTRAR LOS DATOS DE LOS TRABAJADORES *****");
-                        System.out.println(" 0. Volver al menu principal.");
-                        System.out.println(" 1. Mostrar datos de los empleados.");
-                        System.out.println(" 2. Mostrar datos de los supervisores.");
+                        System.out.println("* [0]-> Volver al menu principal.");
+                        System.out.println("* [1]-> Mostrar datos de los empleados.");
+                        System.out.println("* [2]-> Mostrar datos de los supervisores.");
 
-                        System.out.print("Ingrese una opcion: ");
+                        System.out.print("* Ingrese una opcion: ");
                         eleccionUsuarioSubMenu = input.nextLine();
                         System.out.println("");
 
                         switch (eleccionUsuarioSubMenu) {
                             case "0":
-                                System.out.println("Volviendo al menu principal");
+                                System.out.println("* Volviendo al menu principal");
                                 System.out.println("");
                                 break;
 
@@ -315,7 +315,7 @@ public class Office {
                                 break;
 
                             default:
-                                System.out.println("Opcion no valida");
+                                System.out.println("* Opcion no valida");
                                 System.out.println("");
                                 break;
                         }
@@ -332,17 +332,17 @@ public class Office {
                     while (!eleccionUsuarioSubMenu.equals("0")) {
 
                         System.out.println("***** MENU DE MODIFICAR EL SALARIO DE UN TRABAJADOR *****");
-                        System.out.println(" 0. Volver al menu principal.");
-                        System.out.println(" 1. Modificar el salario de un empleado.");
-                        System.out.println(" 2. Modificar el salario de un supervisor.");
+                        System.out.println("* [0]-> Volver al menu principal.");
+                        System.out.println("* [1]-> Modificar el salario de un empleado.");
+                        System.out.println("* [2]-> Modificar el salario de un supervisor.");
 
-                        System.out.print("Ingrese una opcion: ");
+                        System.out.print("* Ingrese una opcion: ");
                         eleccionUsuarioSubMenu = input.nextLine();
                         System.out.println("");
 
                         switch (eleccionUsuarioSubMenu) {
                             case "0":
-                                System.out.println("Volviendo al menu principal");
+                                System.out.println("* Volviendo al menu principal");
                                 System.out.println("");
                                 break;
 
@@ -357,7 +357,7 @@ public class Office {
                                 break;
 
                             default:
-                                System.out.println("Opcion no valida");
+                                System.out.println("* Opcion no valida");
                                 System.out.println("");
                                 break;
                         }
@@ -375,17 +375,17 @@ public class Office {
                     while (!eleccionUsuarioSubMenu.equals("0")) {
 
                         System.out.println("***** MENU DE MODIFICAR EL HORARIO A UN TRABAJADOR *****");
-                        System.out.println(" 0. Volver al menu principal.");
-                        System.out.println(" 1. Modificar el horario a un empleado.");
-                        System.out.println(" 2. Modificar el horario a un supervisor.");
+                        System.out.println("* [0]-> Volver al menu principal.");
+                        System.out.println("* [1]-> Modificar el horario a un empleado.");
+                        System.out.println("* [2]-> Modificar el horario a un supervisor.");
 
-                        System.out.print("Ingrese una opcion: ");
+                        System.out.print("* Ingrese una opcion: ");
                         eleccionUsuarioSubMenu = input.nextLine();
                         System.out.println("");
 
                         switch (eleccionUsuarioSubMenu) {
                             case "0":
-                                System.out.println("Volviendo al menu principal");
+                                System.out.println("* Volviendo al menu principal");
                                 System.out.println("");
                                 break;
 
@@ -400,7 +400,7 @@ public class Office {
                                 break;
 
                             default:
-                                System.out.println("Opcion no valida");
+                                System.out.println("* Opcion no valida");
                                 System.out.println("");
                                 break;
                         }
@@ -417,11 +417,11 @@ public class Office {
                     while (!eleccionUsuarioSubMenu.equals("0")) {
 
                         System.out.println("***** MENU DE MODIFICAR EL EMAIL A UN TRABAJADOR *****");
-                        System.out.println(" 0. Volver al menu principal.");
-                        System.out.println(" 1. Modificar el email a un empleado.");
-                        System.out.println(" 2. Modificar el email a un supervisor.");
+                        System.out.println("* [0]-> Volver al menu principal.");
+                        System.out.println("* [1]-> Modificar el email a un empleado.");
+                        System.out.println("* [2]-> Modificar el email a un supervisor.");
 
-                        System.out.print("Ingrese una opcion: ");
+                        System.out.print("* Ingrese una opcion: ");
                         eleccionUsuarioSubMenu = input.nextLine();
                         System.out.println("");
 
@@ -429,14 +429,14 @@ public class Office {
 
                         switch (eleccionUsuarioSubMenu) {
                             case "0":
-                                System.out.println("Volviendo al menu principal");
+                                System.out.println("* Volviendo al menu principal");
                                 System.out.println("");
                                 break;
 
                             case "1":
                                 System.out.println("***** MODIFICAR EMAIL A UN EMPLEADO *****");
 
-                                System.out.print("Ingrese el ID del empleado: ");
+                                System.out.print("* Ingrese el ID del empleado: ");
                                 idModificarEmail = input.nextInt();
                                 input.nextLine();
 
@@ -446,19 +446,19 @@ public class Office {
 
                                 if (emp != null) {
 
-                                    System.out.println("***** Se encontro el ID: " + idModificarEmail + " *****");
+                                    System.out.println("***** SE ENCONTRO EL ID: " + idModificarEmail + " *****");
 
                                     System.out.println(
-                                            "Empleado: "
+                                            "* Empleado: "
                                             + emp.getFirstName() + " "
                                             + emp.getLastName()
-                                            + " - Email actual: "
+                                            + " * Email actual: "
                                             + emp.getEmail()
                                     );
 
                                     System.out.println("");
 
-                                    System.out.print("Ingrese el nuevo email del empleado: ");
+                                    System.out.print("*Ingrese el nuevo email del empleado: ");
                                     String nuevoEmailEmpleado = input.nextLine();
 
                                     System.out.println("");
@@ -481,7 +481,7 @@ public class Office {
 
                             case "2":
                                 System.out.println("***** MODIFICAR EMAIL A UN SUPERVISOR *****");
-                                System.out.print("Ingrese el ID del supervisor: ");
+                                System.out.print("* Ingrese el ID del supervisor: ");
                                 idModificarEmail = input.nextInt();
                                 input.nextLine();
 
@@ -491,19 +491,19 @@ public class Office {
 
                                 if (sup != null) {
 
-                                    System.out.println("***** Se encontro el ID: " + idModificarEmail + " *****");
+                                    System.out.println("***** SE ENCONTRO EL ID: " + idModificarEmail + " *****");
 
                                     System.out.println(
                                             "Supervisor: "
                                             + sup.getFirstName() + " "
                                             + sup.getLastName()
-                                            + " - Email actual: "
+                                            + " * Email actual: "
                                             + sup.getEmail()
                                     );
 
                                     System.out.println("");
 
-                                    System.out.print("Ingrese el nuevo email del supervisor: ");
+                                    System.out.print("* Ingrese el nuevo email del supervisor: ");
                                     String nuevoEmailSupervisor = input.nextLine();
 
                                     System.out.println("");
@@ -525,7 +525,7 @@ public class Office {
                                 break;
 
                             default:
-                                System.out.println("Opcion no valida");
+                                System.out.println("* Opcion no valida");
                                 System.out.println("");
                                 break;
                         }
@@ -541,16 +541,16 @@ public class Office {
                     while (!eleccionUsuarioSubMenu.equals("0")) {
 
                         System.out.println("***** MENU DE ASCENDER A UN TRABAJADOR *****");
-                        System.out.println(" 0. Volver al menu principal.");
-                        System.out.println(" 1. Ascender a un empleado.");
-                        System.out.println(" 2. Ascender a un supervisor.");
+                        System.out.println("* [0]-> Volver al menu principal.");
+                        System.out.println("* [1]-> Ascender a un empleado.");
+                        System.out.println("* [2]-> Ascender a un supervisor.");
 
-                        System.out.print("Ingrese una opcion: ");
+                        System.out.print("* Ingrese una opcion: ");
                         eleccionUsuarioSubMenu = input.nextLine();
                         System.out.println("");
                         switch (eleccionUsuarioSubMenu) {
                             case "0":
-                                System.out.println("Volviendo al menu principal");
+                                System.out.println("* Volviendo al menu principal");
                                 System.out.println("");
                                 break;
 
@@ -565,7 +565,7 @@ public class Office {
                                 break;
 
                             default:
-                                System.out.println("Opcion no valida");
+                                System.out.println("* Opcion no valida");
                                 System.out.println("");
                                 break;
                         }
@@ -581,17 +581,17 @@ public class Office {
                     while (!eleccionUsuarioSubMenu.equals("0")) {
 
                         System.out.println("***** MENU DE JUBILACION A UN TRABAJADOR *****");
-                        System.out.println(" 0. Volver al menu principal.");
-                        System.out.println(" 1. Jubilar a un empleado.");
-                        System.out.println(" 2. Jubilar a un supervisor.");
+                        System.out.println("* [0]-> Volver al menu principal.");
+                        System.out.println("* [1]-> Jubilar a un empleado.");
+                        System.out.println("* [2]-> Jubilar a un supervisor.");
 
-                        System.out.print("Ingrese una opcion: ");
+                        System.out.print("* Ingrese una opcion: ");
                         eleccionUsuarioSubMenu = input.nextLine();
                         System.out.println("");
 
                         switch (eleccionUsuarioSubMenu) {
                             case "0":
-                                System.out.println("Volviendo al menu principal");
+                                System.out.println("* Volviendo al menu principal");
                                 System.out.println("");
                                 break;
 
@@ -606,7 +606,7 @@ public class Office {
                                 break;
 
                             default:
-                                System.out.println("Opcion no valida");
+                                System.out.println("* Opcion no valida");
                                 System.out.println("");
                                 break;
                         }
@@ -617,7 +617,7 @@ public class Office {
                 //error al usuario
                 //------------------------------------------------------------
                 default:
-                    System.out.println("Opcion no valida");
+                    System.out.println("* Opcion no valida");
                     System.out.println("");
                     break;
             }

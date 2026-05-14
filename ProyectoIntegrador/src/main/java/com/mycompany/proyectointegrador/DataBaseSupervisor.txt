@@ -7,3 +7,4 @@
 7,Jorge,Torres,45,20,jorge.torres@company.com,Supervisor,true,false,12000.0
 8,Sofia,Flores,36,9,sofia.flores@company.com,Supervisor,true,false,8800.0
 9,Diego,Vargas,41,16,diego.vargas@company.com,Supervisor,true,false,10500.0
+10,Juan,Manuel,36,8,juan.manuelcompany.com,Supervisor,true,false,3400.0

@@ -7,4 +7,5 @@
 7,Ricardo,Navarro,31,8,ricardo.navarro@company.com,Employee,true,false,4800.0
 8,Lucia,Paredes,26,3,lucia.paredes@company.com,Employee,true,false,3400.0
 9,Fernando,Ibarra,35,10,fernando.ibarra@company.com,Employee,true,false,5200.0
-10,Santiago,Herrera,20,2,santiago.herrera@gmail.com,Employee,true,false,5400.0
+10,Santiago,Herrera,20,2,santiago.herrera@company.com,Employee,true,false,5400.0
+11,Gustavo,Montenegro,37,17,gust.monte@company.com,Employee,true,false,3677.0

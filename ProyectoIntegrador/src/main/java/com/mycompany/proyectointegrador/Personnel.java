@@ -157,30 +157,4 @@ public abstract class Personnel {
         this.salary = salary;
     }
 
-    //------------------------------------------------------------
-    //Atributos abstractos (no lleva cuerpo)
-    // showDates() - mostrar datos
-    // onboard() - dar de alta
-    // dismiss() - dar de baja 
-    // changeSalary() - modificar salario
-    // changeHorary() - modificar horario
-    // changeEmail() - modificar email
-    // promotion() - ascender de puesto laboral
-    // retired() - jubilarse de su trabajado
-    //------------------------------------------------------------
-    public abstract void showDates();
-
-    public abstract void onboard();
-
-    public abstract void dismiss();
-
-    public abstract void changeSalary();
-
-    public abstract void changeHorary();
-
-    public abstract void changeEmail();
-
-    public abstract void promotion();
-
-    public abstract void retired();
 }

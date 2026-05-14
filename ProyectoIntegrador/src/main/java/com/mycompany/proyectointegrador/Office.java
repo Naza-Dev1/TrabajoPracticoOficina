@@ -3,8 +3,6 @@ package com.mycompany.proyectointegrador;
 //------------------------------------------------------------
 //Importamos las librerias necesarias.
 //------------------------------------------------------------
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 //------------------------------------------------------------
@@ -21,13 +19,24 @@ public class Office {
         //Instanciamos con la libreria Scanner a "input" que nos 
         // permite guadar los datos ingresados del usuario.
         // 
+        // Instanciamos desde el archivo ManagerDataBaseEmployee a 
+        // "DataBaseEmployee", este nos permite hace las operaciones
+        // save, update y deleted a la base de datos.
+        // 
+        // Instanciamos desde el archivo ManagerDataBaseSupervisor a 
+        // "DataBaseSupervisor", este nos permite hace las operaciones
+        // save, update y deleted a la base de datos.
+        // 
         // Tambien creamos la variable "eleccionUsuario" que contendra
         // lo que el usuario digite.
         //------------------------------------------------------------
+        ManagerDataBaseEmployee DataBaseEmployee = new ManagerDataBaseEmployee("DataBaseEmployee.txt");
+        ManagerDataBaseSupervisor DataBaseSupervisor = new ManagerDataBaseSupervisor("DataBaseSupervisor.txt");
+
         Scanner input = new Scanner(System.in);
         String eleccionUsuarioMenu = "";
         String eleccionUsuarioSubMenu = "";
-        Integer id_employee = 10;
+        Integer id_employee;
         Integer id_supervisor = 10;
         String nombre;
         String apellido;
@@ -38,42 +47,6 @@ public class Office {
         Boolean estaActivo;
         Boolean estaJubilado;
         Double salario;
-        //------------------------------------------------------------
-        //Creamos e instanciamos la Lista "employees", esta contiene 
-        //los datos de los empleados que se le daran al Contructor.
-        //------------------------------------------------------------
-
-        List<Employee> employees = new ArrayList<>(
-                List.of(
-                        new Employee(1, "Andres", "Morales", 28, 5, "andres.morales@company.com", "Employee", true, false, 3200.0),
-                        new Employee(2, "Valeria", "Castro", 24, 2, "valeria.castro@company.com", "Employee", true, false, 2500.0),
-                        new Employee(3, "Sebastian", "Rojas", 30, 7, "sebastian.rojas@company.com", "Employee", true, false, 4100.0),
-                        new Employee(4, "Camila", "Herrera", 27, 4, "camila.herrera@company.com", "Employee", true, false, 3600.0),
-                        new Employee(5, "Daniel", "Vega", 22, 1, "daniel.vega@company.com", "Employee", true, false, 2100.0),
-                        new Employee(6, "Paula", "Mendoza", 29, 6, "paula.mendoza@company.com", "Employee", true, false, 4300.0),
-                        new Employee(7, "Ricardo", "Navarro", 31, 8, "ricardo.navarro@company.com", "Employee", true, false, 4800.0),
-                        new Employee(8, "Lucia", "Paredes", 26, 3, "lucia.paredes@company.com", "Employee", true, false, 3400.0),
-                        new Employee(9, "Fernando", "Ibarra", 35, 10, "fernando.ibarra@company.com", "Employee", true, false, 5200.0)
-                )
-        );
-
-        //------------------------------------------------------------
-        //Creamos e instanciamos la Lista "supervisors", esta contiene 
-        //los datos de los supervisores que se le daran al Contructor.
-        //------------------------------------------------------------
-        List<Supervisor> supervisors = new ArrayList<>(
-                List.of(
-                        new Supervisor(1, "Carlos", "Lopez", 35, 10, "carlos.lopez@company.com", "Supervisor", true, false, 8500.0),
-                        new Supervisor(2, "Maria", "Gonzalez", 40, 15, "maria.gonzalez@company.com", "Supervisor", true, false, 9500.0),
-                        new Supervisor(3, "Luis", "Martinez", 38, 12, "luis.martinez@company.com", "Supervisor", true, false, 9000.0),
-                        new Supervisor(4, "Ana", "Rodriguez", 42, 18, "ana.rodriguez@company.com", "Supervisor", true, false, 11000.0),
-                        new Supervisor(5, "Pedro", "Sanchez", 37, 11, "pedro.sanchez@company.com", "Supervisor", true, false, 8700.0),
-                        new Supervisor(6, "Laura", "Ramirez", 39, 14, "laura.ramirez@company.com", "Supervisor", true, false, 9200.0),
-                        new Supervisor(7, "Jorge", "Torres", 45, 20, "jorge.torres@company.com", "Supervisor", true, false, 12000.0),
-                        new Supervisor(8, "Sofia", "Flores", 36, 9, "sofia.flores@company.com", "Supervisor", true, false, 8800.0),
-                        new Supervisor(9, "Diego", "Vargas", 41, 16, "diego.vargas@company.com", "Supervisor", true, false, 10500.0)
-                )
-        );
 
         //------------------------------------------------------------
         //Creamos un bucle while que mostrara el menu del programa.
@@ -136,6 +109,8 @@ public class Office {
 
                                 System.out.println("***** AGREGAR UN NUEVO EMPLEADO *****");
 
+                                id_employee = DataBaseEmployee.getNextId();
+
                                 System.out.print("Ingrese el nombre del empleado: ");
                                 nombre = input.nextLine();
 
@@ -163,8 +138,7 @@ public class Office {
                                 System.out.print("Ingrese el salario del empleado: ");
                                 salario = Double.parseDouble(input.nextLine());
 
-                                employees.add(new Employee(id_employee, nombre, apellido, edad, añosExperincia, email, ocupacion, estaActivo, estaJubilado, salario));
-                                id_employee++;
+                                DataBaseEmployee.save(new Employee(id_employee, nombre, apellido, edad, añosExperincia, email, ocupacion, estaActivo, estaJubilado, salario));
 
                                 System.out.println("***** SE AGREGO EL NUEVO EMPLEADO *****");
                                 System.out.println("");
@@ -173,6 +147,8 @@ public class Office {
 
                             case "2":
                                 System.out.print("***** AGREGAR UN NUEVO SUPERVISOR *****\n");
+
+                                id_supervisor = DataBaseSupervisor.getNextId();
 
                                 System.out.print("Ingrese el nombre del supervisor: ");
                                 nombre = input.nextLine();
@@ -201,8 +177,7 @@ public class Office {
                                 System.out.print("Ingrese el salario del supervisor: ");
                                 salario = Double.parseDouble(input.nextLine());
 
-                                supervisors.add(new Supervisor(id_supervisor, nombre, apellido, edad, añosExperincia, email, ocupacion, estaActivo, estaJubilado, salario));
-                                id_supervisor++;
+                                DataBaseSupervisor.save(new Supervisor(id_supervisor, nombre, apellido, edad, añosExperincia, email, ocupacion, estaActivo, estaJubilado, salario));
 
                                 System.out.println("***** SE AGREGO EL NUEVO SUPERVISOR *****");
                                 System.out.println("");
@@ -327,17 +302,15 @@ public class Office {
 
                             case "1":
                                 System.out.println("***** MOSTRANDO DATOS DE LOS EMPLEADOS *****");
-                                for (Employee emp : employees) {
-                                    emp.showDates();
-                                }
+                                DataBaseEmployee.showAll();
+
                                 System.out.println("");
                                 break;
 
                             case "2":
                                 System.out.println("***** MOSTRANDO DATOS DE LOS SUPERVISORES *****");
-                                for (Supervisor sup : supervisors) {
-                                    sup.showDates();
-                                }
+                                DataBaseSupervisor.showAll();
+
                                 System.out.println("");
                                 break;
 
@@ -466,64 +439,88 @@ public class Office {
                                 System.out.print("Ingrese el ID del empleado: ");
                                 idModificarEmail = input.nextInt();
                                 input.nextLine();
+
                                 System.out.println("");
 
-                                boolean empleadoEncontrado = false;
-                                for (Employee emp : employees) {
-                                    if (emp.getId().equals(idModificarEmail)) {
-                                        System.out.println("***** Se encontro el ID:" + idModificarEmail + " *****");
-                                        System.out.println("Empleado: " + emp.getFirstName() + " " + emp.getLastName() + "- Email actual: " + emp.getEmail());
-                                        System.out.println("");
+                                Employee emp = DataBaseEmployee.findByID(idModificarEmail);
 
-                                        System.out.print("Ingrese el nuevo email del empleado: ");
-                                        String nuevoEmailEmpleado = input.nextLine();
-                                        System.out.println("");
+                                if (emp != null) {
 
-                                        emp.setEmail(nuevoEmailEmpleado);
-                                        System.out.println("***** EMAIL MODIFICADO EXITOSAMENTE *****");
-                                        empleadoEncontrado = true;
-                                        break;
-                                    }
+                                    System.out.println("***** Se encontro el ID: " + idModificarEmail + " *****");
+
+                                    System.out.println(
+                                            "Empleado: "
+                                            + emp.getFirstName() + " "
+                                            + emp.getLastName()
+                                            + " - Email actual: "
+                                            + emp.getEmail()
+                                    );
+
+                                    System.out.println("");
+
+                                    System.out.print("Ingrese el nuevo email del empleado: ");
+                                    String nuevoEmailEmpleado = input.nextLine();
+
+                                    System.out.println("");
+
+                                    DataBaseEmployee.update(idModificarEmail, "email", nuevoEmailEmpleado);
+
+                                    System.out.println("***** EMAIL MODIFICADO EXITOSAMENTE *****");
+
+                                } else {
+
+                                    System.out.println(
+                                            "***** NO SE ENCONTRO EL ID: "
+                                            + idModificarEmail
+                                            + " *****"
+                                    );
                                 }
-                                if (!empleadoEncontrado) {
 
-                                    System.out.println("***** NO SE ENCONTRO EL ID: " + idModificarEmail
-                                            + " *****");
-
-                                }
                                 System.out.println("");
                                 break;
 
                             case "2":
                                 System.out.println("***** MODIFICAR EMAIL A UN SUPERVISOR *****");
-                                System.out.println("Ingrese el ID del supervisor: ");
+                                System.out.print("Ingrese el ID del supervisor: ");
                                 idModificarEmail = input.nextInt();
                                 input.nextLine();
+
                                 System.out.println("");
 
-                                boolean supervisorEncontrado = false;
-                                for (Supervisor sup : supervisors) {
-                                    if (sup.getId().equals(idModificarEmail)) {
-                                        System.out.println("***** Se encontro el ID:" + idModificarEmail + " *****");
-                                        System.out.println("Supervisor: " + sup.getFirstName() + " " + sup.getLastName() + "- Email actual: " + sup.getEmail());
-                                        System.out.println("");
+                                Supervisor sup = DataBaseSupervisor.findByID(idModificarEmail);
 
-                                        System.out.print("Ingrese el nuevo email del supervisor: ");
-                                        String nuevoEmailSupervisor = input.nextLine();
-                                        System.out.println("");
+                                if (sup != null) {
 
-                                        sup.setEmail(nuevoEmailSupervisor);
-                                        System.out.println("***** EMAIL MODIFICADO EXITOSAMENTE *****");
+                                    System.out.println("***** Se encontro el ID: " + idModificarEmail + " *****");
 
-                                        supervisorEncontrado = true;
-                                        break;
-                                    }
+                                    System.out.println(
+                                            "Supervisor: "
+                                            + sup.getFirstName() + " "
+                                            + sup.getLastName()
+                                            + " - Email actual: "
+                                            + sup.getEmail()
+                                    );
+
+                                    System.out.println("");
+
+                                    System.out.print("Ingrese el nuevo email del supervisor: ");
+                                    String nuevoEmailSupervisor = input.nextLine();
+
+                                    System.out.println("");
+
+                                    DataBaseSupervisor.update(idModificarEmail, "email", nuevoEmailSupervisor);
+
+                                    System.out.println("***** EMAIL MODIFICADO EXITOSAMENTE *****");
+
+                                } else {
+
+                                    System.out.println(
+                                            "***** NO SE ENCONTRO EL ID: "
+                                            + idModificarEmail
+                                            + " *****"
+                                    );
                                 }
-                                if (!supervisorEncontrado) {
-                                    System.out.println("***** NO SE ENCONTRO EL ID: " + idModificarEmail
-                                            + " *****");
 
-                                }
                                 System.out.println("");
                                 break;
 

@@ -7,7 +7,21 @@ public class Employee extends Personnel {
     }
 
     @Override
+    public String toString() {
 
+        return id + ","
+                + firstName + ","
+                + lastName + ","
+                + age + ","
+                + yearsOfExperience + ","
+                + email + ","
+                + occupation + ","
+                + isActive + ","
+                + isRetired + ","
+                + salary;
+    }
+
+    @Override
     public void showDates() {
         System.out.println("***** ***** EMPLEADO ID: " + this.getId() + " ***** ****** ******");
         System.out.println("* Name: " + this.getFirstName() + " - Last name: " + this.getLastName());

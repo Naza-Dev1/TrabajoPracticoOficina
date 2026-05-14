@@ -14,7 +14,7 @@
 ***
 
 ### Link del repositorio original del codigo:
-**Link aqui**
+**https://github.com/aytekinkaplan/Java-OOP-Projects/tree/master**
 
 ***
 
@@ -87,11 +87,11 @@
     - [ ] 2. Modificar horario de un supervisor.
     - [ ] Default. "Opcion no valida".
 
-- [ ] 7. Modificar email de un trabajador.
-    - [ ] 0. Volver al Menu principal.
-    - [ ] 1. Modificar email de un empleado.
-    - [ ] 2. Modificar email de un supervisor.
-    - [ ] Default. "Opcion no valida".
+- [x] 7. Modificar email de un trabajador.
+    - [x] 0. Volver al Menu principal.
+    - [x] 1. Modificar email de un empleado.
+    - [x] 2. Modificar email de un supervisor.
+    - [x] Default. "Opcion no valida".
 
 - [ ] 8. Ascenso de un trabajador.
     - [ ] 0. Volver al Menu principal.
@@ -125,7 +125,7 @@ Lo agregamos al grupo de whatsapp y le dimos los link al repositorio de github.
 
 ***
 
-**(29/5/26)**
+**(29/4/26)**
 
 En el dia de hoy el compañero Santiago H, logro corregir el error que impedia la ejecucion del programa en el IDE Apache Netbens.
 El error estaba en el archivo pom.xml , el mismo por alguna razon buscaba la funcion main en un archivo llamado Ma.java que no existe en el proyecto. Esto fue corregido y ahora busca el archivo que tiene el main (Office.java).
@@ -176,3 +176,26 @@ Robertino adelanto el la seccion de codigo que permite mostrar y modificar el sa
 ***
 
 **(6/5/26)**
+El compañero Santiago H agrego saltos de linea a todo el docuemnto con el fin de separar cada parte del menu y las opciones.
+
+***
+
+**(13/5/26)**
+El compañero Robertino agrego la opcion para modificar el email de los Empleados y Supervisores.
+
+En clases se planteo que los atibutos "isActive" e "isRetired" sean cambiados por un solo atributo que represente mejor el estado del trabajador.
+
+En clases se planteo cambiar la forma de almacenar los datos del programa por una mini base de datos en vez de usar una Lista.
+Esto es con el fin de poder tener datos permanentes.
+
+***
+
+**(14/5/26)**
+El compañero Santigo H creo 2 archivos .txt para usar como base de datos. 
+Tambien creo 2 archivos .java que sirven gestor de la base de datos y nos brinda una forma facil de guardar, borrar, mostrar y modificar los datos. 
+
+El compañero Santiago H a adaptado las 2 bases de datos a lo echo hasta el momento.
+
+```Se creo DataBaseEmployee.txt, DataBaseSupervisor.txt, ManagerDataBaseEmployee.java y ManagerDataBaseSupervisor.java```
+
+***

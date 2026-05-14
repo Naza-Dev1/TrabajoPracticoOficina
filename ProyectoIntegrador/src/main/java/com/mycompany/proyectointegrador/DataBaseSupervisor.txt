@@ -1,0 +1,9 @@
+1,Carlos,Lopez,35,10,carlos.lopez@company.com,Supervisor,true,false,8500.0
+2,Maria,Gonzalez,40,15,maria.gonzalez@company.com,Supervisor,true,false,9500.0
+3,Luis,Martinez,38,12,luis.martinez@company.com,Supervisor,true,false,9000.0
+4,Ana,Rodriguez,42,18,ana.rodriguez@company.com,Supervisor,true,false,11000.0
+5,Pedro,Sanchez,37,11,pedro.sanchez@company.com,Supervisor,true,false,8700.0
+6,Laura,Ramirez,39,14,laura.ramirez@company.com,Supervisor,true,false,9200.0
+7,Jorge,Torres,45,20,jorge.torres@company.com,Supervisor,true,false,12000.0
+8,Sofia,Flores,36,9,sofia.flores@company.com,Supervisor,true,false,8800.0
+9,Diego,Vargas,41,16,diego.vargas@company.com,Supervisor,true,false,10500.0

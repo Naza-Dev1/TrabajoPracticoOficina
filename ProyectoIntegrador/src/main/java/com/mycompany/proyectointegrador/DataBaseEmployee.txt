@@ -1,0 +1,10 @@
+1,Andres,Morales,28,5,andres.morales@company.com,Employee,true,false,3200.0
+2,Valeria,Castro,24,2,valeria.castro@company.com,Employee,true,false,2500.0
+3,Sebastian,Rojas,30,7,sebastian.rojas@company.com,Employee,true,false,4100.0
+4,Camila,Herrera,27,4,camila.herrera@company.com,Employee,true,false,3600.0
+5,Daniel,Vega,22,1,daniel.vega@company.com,Employee,true,false,2100.0
+6,Paula,Mendoza,29,6,paula.mendoza@company.com,Employee,true,false,4300.0
+7,Ricardo,Navarro,31,8,ricardo.navarro@company.com,Employee,true,false,4800.0
+8,Lucia,Paredes,26,3,lucia.paredes@company.com,Employee,true,false,3400.0
+9,Fernando,Ibarra,35,10,fernando.ibarra@company.com,Employee,true,false,5200.0
+10,Santiago,Herrera,20,2,santiago.herrera@gmail.com,Employee,true,false,5400.0

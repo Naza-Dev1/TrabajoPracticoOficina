@@ -25,14 +25,13 @@ public abstract class Personnel {
     protected Integer yearsOfExperience;
     protected String email;
     protected String occupation;
-    protected Boolean isActive;
-    protected Boolean isRetired;
+    protected String workStatus;
     protected Double salary;
 
     //------------------------------------------------------------
     //Constructor con parametros. 
     //------------------------------------------------------------
-    public Personnel(Integer id, String firstName, String lastName, Integer age, Integer yearsOfExperience, String email, String occupation, Boolean isActive, Boolean isRetired, Double salary) {
+    public Personnel(Integer id, String firstName, String lastName, Integer age, Integer yearsOfExperience, String email, String occupation, String workStatus, Double salary) {
 
         this.id = id;
         this.firstName = firstName;
@@ -41,8 +40,7 @@ public abstract class Personnel {
         this.yearsOfExperience = yearsOfExperience;
         this.email = email;
         this.occupation = occupation;
-        this.isActive = isActive;
-        this.isRetired = isRetired;
+        this.workStatus = workStatus;
         this.salary = salary;
     }
 
@@ -125,25 +123,14 @@ public abstract class Personnel {
     }
 
     //------------------------------------------------------------
-    //Metodo get y set del atributo isActive.
+    //Metodo get y set del atributo workStatus.
     //------------------------------------------------------------
-    public Boolean getIsActive() {
-        return isActive;
+    public String getWorkStatus() {
+        return workStatus;
     }
 
-    public void setIsActive(Boolean isActive) {
-        this.isActive = isActive;
-    }
-
-    //------------------------------------------------------------
-    //Metodo get y set del atributo isRetired.
-    //------------------------------------------------------------
-    public Boolean getIsRetired() {
-        return isRetired;
-    }
-
-    public void setIsRetired(Boolean isRetired) {
-        this.isRetired = isRetired;
+    public void setWorStatus(String workStatus) {
+        this.workStatus = workStatus;
     }
 
     //------------------------------------------------------------

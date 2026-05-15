@@ -2,8 +2,8 @@ package com.mycompany.proyectointegrador;
 
 public class Employee extends Personnel {
 
-    public Employee(Integer id, String firstName, String lastName, Integer age, Integer yearsOfExperience, String email, String occupation, Boolean isActive, Boolean isRetired, Double salary) {
-        super(id, firstName, lastName, age, yearsOfExperience, email, occupation, isActive, isRetired, salary);
+    public Employee(Integer id, String firstName, String lastName, Integer age, Integer yearsOfExperience, String email, String occupation, String workStatus, Double salary) {
+        super(id, firstName, lastName, age, yearsOfExperience, email, occupation, workStatus, salary);
     }
 
     @Override
@@ -16,8 +16,7 @@ public class Employee extends Personnel {
                 + yearsOfExperience + ","
                 + email + ","
                 + occupation + ","
-                + isActive + ","
-                + isRetired + ","
+                + workStatus + ","
                 + salary;
     }
 

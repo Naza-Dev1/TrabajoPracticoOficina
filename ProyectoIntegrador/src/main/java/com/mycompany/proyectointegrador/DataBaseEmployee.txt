@@ -1,11 +1,21 @@
-1,Andres,Morales,28,5,andres.morales@company.com,Employee,true,false,3200.0
-2,Valeria,Castro,24,2,valeria.castro@company.com,Employee,true,false,2500.0
-3,Sebastian,Rojas,30,7,sebastian.rojas@company.com,Employee,true,false,4100.0
-4,Camila,Herrera,27,4,camila.herrera@company.com,Employee,true,false,3600.0
-5,Daniel,Vega,22,1,daniel.vega@company.com,Employee,true,false,2100.0
-6,Paula,Mendoza,29,6,paula.mendoza@company.com,Employee,true,false,4300.0
-7,Ricardo,Navarro,31,8,ricardo.navarro@company.com,Employee,true,false,4800.0
-8,Lucia,Paredes,26,3,lucia.paredes@company.com,Employee,true,false,3400.0
-9,Fernando,Ibarra,35,10,fernando.ibarra@company.com,Employee,true,false,5200.0
-10,Santiago,Herrera,20,2,santiago.herrera@company.com,Employee,true,false,5400.0
-11,Gustavo,Montenegro,37,17,gust.monte@company.com,Employee,true,false,3677.0
+1,Juan,Perez,28,5,juan.perez@gmail.com,Backend Developer,Active,3500.0
+2,Ana,Gomez,34,10,ana.gomez@gmail.com,Project Manager,Active,5200.0
+3,Carlos,Lopez,41,15,carlos.lopez@gmail.com,System Analyst,Suspended,4800.0
+4,Lucia,Fernandez,25,2,lucia.fernandez@gmail.com,QA Tester,Active,2800.0
+5,Martin,Ruiz,39,12,martin.ruiz@gmail.com,DevOps Engineer,Active,6100.0
+6,Sofia,Martinez,31,7,sofia.martinez@gmail.com,Frontend Developer,OnMedicalLeave,3900.0
+7,Diego,Alvarez,45,20,diego.alvarez@gmail.com,Database Administrator,Active,7000.0
+8,Valentina,Castro,27,4,valentina.castro@gmail.com,UX Designer,Active,3200.0
+9,Nicolas,Torres,50,25,nicolas.torres@gmail.com,Software Architect,Retired,8500.0
+10,Florencia,Ramirez,29,6,florencia.ramirez@gmail.com,Mobile Developer,Active,4100.0
+11,Matias,Herrera,33,9,matias.herrera@gmail.com,Cybersecurity Analyst,Suspended,5300.0
+12,Camila,Navarro,26,3,camila.navarro@gmail.com,Data Analyst,Active,3400.0
+13,Santiago,Silva,37,14,santiago.silva@gmail.com,Team Leader,Active,6400.0
+14,Julieta,Morales,30,8,julieta.morales@gmail.com,HR Specialist,Active,3700.0
+15,Facundo,Ortega,42,18,facundo.ortega@gmail.com,Network Engineer,OnMedicalLeave,5900.0
+16,Agustina,Reyes,24,1,agustina.reyes@gmail.com,Support Technician,Active,2500.0
+17,Leonardo,Mendez,46,22,leonardo.mendez@gmail.com,CTO,Active,12000.0
+18,Paula,Vega,32,11,paula.vega@gmail.com,Business Analyst,Active,5000.0
+19,Emiliano,Ibarra,38,13,emiliano.ibarra@gmail.com,Cloud Engineer,Suspended,6700.0
+20,Milagros,Paz,27,5,milagros.paz@gmail.com,UI Designer,Active,3300.0
+21,Nazareno,Cevalle,18,1,naza@gmail.com,Big Data Analyst,Active,5000.0

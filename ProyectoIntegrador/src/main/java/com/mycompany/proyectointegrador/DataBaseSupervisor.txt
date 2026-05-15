@@ -1,10 +1,20 @@
-1,Carlos,Lopez,35,10,carlos.lopez@company.com,Supervisor,true,false,8500.0
-2,Maria,Gonzalez,40,15,maria.gonzalez@company.com,Supervisor,true,false,9500.0
-3,Luis,Martinez,38,12,luis.martinez@company.com,Supervisor,true,false,9000.0
-4,Ana,Rodriguez,42,18,ana.rodriguez@company.com,Supervisor,true,false,11000.0
-5,Pedro,Sanchez,37,11,pedro.sanchez@company.com,Supervisor,true,false,8700.0
-6,Laura,Ramirez,39,14,laura.ramirez@company.com,Supervisor,true,false,9200.0
-7,Jorge,Torres,45,20,jorge.torres@company.com,Supervisor,true,false,12000.0
-8,Sofia,Flores,36,9,sofia.flores@company.com,Supervisor,true,false,8800.0
-9,Diego,Vargas,41,16,diego.vargas@company.com,Supervisor,true,false,10500.0
-10,Juan,Manuel,36,8,juan.manuelcompany.com,Supervisor,true,false,3400.0
+1,Marcos,Diaz,29,6,marcos.diaz@gmail.com,Backend Developer,Active,3600
+2,Carla,Suarez,35,11,carla.suarez@gmail.com,Project Manager,Active,5400
+3,Federico,Acosta,43,17,federico.acosta@gmail.com,System Analyst,Suspended,5000
+4,Melina,Rojas,26,3,melina.rojas@gmail.com,QA Tester,Active,2900
+5,Gonzalo,Peralta,40,13,gonzalo.peralta@gmail.com,DevOps Engineer,Active,6200
+6,Daniela,Quiroga,32,8,daniela.quiroga@gmail.com,Frontend Developer,OnMedicalLeave,4100
+7,Ricardo,Sosa,47,21,ricardo.sosa@gmail.com,Database Administrator,Active,7300
+8,Brenda,Flores,28,5,brenda.flores@gmail.com,UX Designer,Active,3400
+9,Hector,Medina,52,27,hector.medina@gmail.com,Software Architect,Retired,8900
+10,Noelia,Dominguez,30,7,noelia.dominguez@gmail.com,Mobile Developer,Active,4300
+11,Cristian,Ayala,34,10,cristian.ayala@gmail.com,Cybersecurity Analyst,Suspended,5500
+12,Romina,Cabrera,25,2,romina.cabrera@gmail.com,Data Analyst,Active,3500
+13,Esteban,Molina,38,15,esteban.molina@gmail.com,Team Leader,Active,6600
+14,Vanesa,Godoy,31,9,vanesa.godoy@gmail.com,HR Specialist,Active,3900
+15,Pablo,Benitez,44,19,pablo.benitez@gmail.com,Network Engineer,OnMedicalLeave,6100
+16,Ailen,Correa,23,1,ailen.correa@gmail.com,Support Technician,Active,2600
+17,Oscar,Villalba,48,24,oscar.villalba@gmail.com,CTO,Active,12500
+18,Marina,Ledesma,33,12,marina.ledesma@gmail.com,Business Analyst,Active,5200
+19,Tomas,Ponce,39,14,tomas.ponce@gmail.com,Cloud Engineer,Suspended,6900
+20,Karen,Nuñez,27,4,karen.nunez@gmail.com,UI Designer,Active,3450

@@ -35,7 +35,7 @@ public class ManagerDataBaseSupervisor {
                 String[] datos = linea.split(",");
 
                 // VALIDAR CANTIDAD DE COLUMNAS
-                if (datos.length != 10) {
+                if (datos.length != 9) {
 
                     System.out.println("Linea invalida: " + linea);
                     continue;
@@ -50,9 +50,8 @@ public class ManagerDataBaseSupervisor {
                     int yearsOfExperience = Integer.parseInt(datos[4].trim());
                     String email = datos[5].trim();
                     String occupation = datos[6].trim();
-                    boolean isActive = Boolean.parseBoolean(datos[7].trim());
-                    boolean isRetired = Boolean.parseBoolean(datos[8].trim());
-                    double salary = Double.parseDouble(datos[9].trim());
+                    String workStatus = datos[7].trim();
+                    double salary = Double.parseDouble(datos[8].trim());
 
                     Supervisor sup = new Supervisor(
                             id,
@@ -62,8 +61,7 @@ public class ManagerDataBaseSupervisor {
                             yearsOfExperience,
                             email,
                             occupation,
-                            isActive,
-                            isRetired,
+                            workStatus,
                             salary
                     );
 
@@ -128,18 +126,22 @@ public class ManagerDataBaseSupervisor {
 
             if (sup.getId() == idBuscado) {
 
-                switch (campo.toLowerCase()) {
+                switch (campo) {
 
-                    case "firstname":
+                    case "firstName":
                         sup.setFirstName((String) nuevoValor);
                         break;
 
-                    case "lastname":
+                    case "lastName":
                         sup.setLastName((String) nuevoValor);
                         break;
 
                     case "age":
                         sup.setAge((Integer) nuevoValor);
+                        break;
+
+                    case "yearsOfExperience":
+                        sup.setYearsOfExperience((Integer) nuevoValor);
                         break;
 
                     case "email":
@@ -154,12 +156,8 @@ public class ManagerDataBaseSupervisor {
                         sup.setOccupation((String) nuevoValor);
                         break;
 
-                    case "isactive":
-                        sup.setIsActive((Boolean) nuevoValor);
-                        break;
-
-                    case "isretired":
-                        sup.setIsRetired((Boolean) nuevoValor);
+                    case "workStatus":
+                        sup.setWorStatus((String) nuevoValor);
                         break;
 
                     default:
@@ -207,10 +205,13 @@ public class ManagerDataBaseSupervisor {
         for (Supervisor sup : supervisors) {
 
             System.out.println("***** ***** EMPLEADO ID: " + sup.getId() + " ***** ****** ******");
-            System.out.println("* Name: " + sup.getFirstName() + " - Last name: " + sup.getLastName());
-            System.out.println("* Age: " + sup.getAge() + " - Email: " + sup.getEmail());
-            System.out.println("* Years of experience: " + sup.getYearsOfExperience() + " - Occupation: " + sup.getOccupation());
-            System.out.println("* Active: " + sup.getIsActive() + " - Retired: " + sup.getIsRetired());
+            System.out.println("* First name: " + sup.getFirstName());
+            System.out.println("* Last name: " + sup.getLastName());
+            System.out.println("* Age: " + sup.getAge());
+            System.out.println("* Email: " + sup.getEmail());
+            System.out.println("* Years of experience: " + sup.getYearsOfExperience());
+            System.out.println("* Occupation: " + sup.getOccupation());
+            System.out.println("* Status: " + sup.getWorkStatus());
             System.out.println("* Salary: " + sup.getSalary());
             System.out.println("***** ****** ***** ****** ***** ****** ******\n");
             System.out.println("");
